@@ -42,9 +42,9 @@ public class GitHubClientService {
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
 
         // If using a Personal Access Token for higher rate limits:
-        if (githubToken != null && !githubToken.isEmpty()) {
-            headers.set("Authorization", "Bearer " + githubToken);
-        }
+//        if (githubToken != null && !githubToken.isEmpty()) {
+//            headers.set("Authorization", "Bearer " + githubToken);
+//        }
 
         HttpEntity<Void> request = new HttpEntity<>(headers);
         try {
