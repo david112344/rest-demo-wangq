@@ -12,6 +12,6 @@ spring:
 github:
   api:
     base-url: https://api.github.com
-    token: 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
+    token: ghp_yourgithubtokenhere1234567890abcdef
 
 
