@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: rest-service
+  datasource:
+    username: dmsTest
+    password: Ecs@123456
+    url: jdbc:mysql://118.31.102.201:3306/kkb?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+github:
+  api:
+    base-url: https://api.github.com
+    token: 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
+
+

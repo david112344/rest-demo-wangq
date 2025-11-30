@@ -1,0 +1,17 @@
+###
+# 测试获取仓库详情 - 成功场景 spring-boot
+GET http://localhost:8080/repositories/spring-projects/spring-boot
+Accept: application/json
+
+
+###
+# 测试获取仓库详情 - 成功场景 dubbo
+# 将 {owner} 替换为实际的仓库所有者，{repoName} 替换为实际的仓库名称
+GET http://localhost:8080/repositories/apache/dubbo
+Accept: application/json
+
+
+###
+# 测试获取仓库详情 - 仓库不存在场景 (预期返回 404)
+GET http://localhost:8080/repositories/nonexistent-owner/nonexistent-repo
+Accept: application/json
