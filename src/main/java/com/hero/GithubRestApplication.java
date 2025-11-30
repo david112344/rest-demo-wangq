@@ -11,10 +11,10 @@ import java.util.Optional;
 
 @EnableJpaAuditing
 @SpringBootApplication
-public class Application {
+public class GithubRestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(GithubRestApplication.class, args);
     }
 
     @Bean
