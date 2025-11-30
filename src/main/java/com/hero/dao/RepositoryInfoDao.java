@@ -3,8 +3,6 @@ package com.hero.dao;
 import com.hero.dao.entity.RepositoryInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
-
 /**
  * Repository interface to manage {@link RepositoryInfo} entity persistence.
  * Extends the Spring Data JPA {@code JpaRepository} interface for standard.
@@ -15,13 +13,4 @@ import java.util.Optional;
  *
  */
 public interface RepositoryInfoDao extends JpaRepository<RepositoryInfo, Long> {
-
-    /**
-     * Finds a RepositoryInfo entity by its owner and repository name.
-     *
-     * @param owner the username of the repository owner
-     * @param repoName the name of the repository
-     * @return an Optional containing the found RepositoryInfo, or empty if not found
-     */
-    Optional<RepositoryInfo> findByOwnerAndRepoName(String owner, String repoName);
 }
