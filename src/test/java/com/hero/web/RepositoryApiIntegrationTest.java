@@ -31,7 +31,7 @@ class RepositoryApiIntegrationTest {
 
     @BeforeAll
     static void startWireMock() {
-        // create and start WireMock server
+        // create and start a WireMock server
         wireMockServer = new WireMockServer(WireMockConfiguration.wireMockConfig().dynamicPort());
         wireMockServer.start();
     }
@@ -54,7 +54,7 @@ class RepositoryApiIntegrationTest {
 
     @BeforeEach
     void setup() {
-        // clear database before each test
+        // clear the database before each test
         repoInfoRepo.deleteAll();
         // reset WireMock before each test
         wireMockServer.resetAll();
@@ -62,7 +62,7 @@ class RepositoryApiIntegrationTest {
 
 
     @Test
-    @DisplayName("On cache miss, get data from GitHub and cache it")
+    @DisplayName("Get data from GitHub and save it")
     void givenRepoNotCached_whenGetRepo_thenFetchFromGitHubAndCache() {
         // 1. setup WireMock stub - simulate GitHub API response
         wireMockServer.stubFor(get(urlEqualTo("/repos/octocat/Hello-World"))
